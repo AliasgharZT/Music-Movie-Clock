@@ -1,0 +1,116 @@
+<Style>:
+
+    lbl:lbl
+
+    AnchorLayout:
+        name:'drawing'
+        anchor_x:'left'
+        anchor_y:'bottom'
+
+        FloatLayout:
+            size_hint:0.4,0.54
+
+            canvas:
+                Ellipse:
+                    angle_start:120
+                    angle_end:420
+                    pos:110,110
+                    size:80,80
+                    source:'az.png'
+            on_touch_down:root.chap()
+
+    AnchorLayout:
+        name:'timer'
+        anchor_x:'center'
+        anchor_y:'center'
+
+        BoxLayout:
+            orientation:'vertical'
+            size_hint:0.5,0.3
+
+            Label:
+                id:lbl
+                text:'** : ***'
+                font_size:25
+            AnchorLayout:
+                anchor_x:'center'
+                anchor_y:'center'
+                BoxLayout:
+                    size_hint:0.4,0.3
+
+                    Button:
+                        text:'start'
+                        on_press: root.start()
+
+                    Button:
+                        text:'stop'
+                        on_press:root.stop()
+
+    AnchorLayout:
+        name:'close'
+        anchor_x:'center'
+        anchor_y:'bottom'
+
+        Button:
+            size_hint:0.2,0.1
+            text:'close'
+            on_press:app.close()
+
+    AnchorLayout:
+        name:'filechooser'
+        anchor_x:'left'
+        anchor_y:'top'
+
+        FileChooserListView:
+            size_hint:0.5,0.4
+
+    AnchorLayout:
+        anchor_x:'right'
+        anchor_y:'top'
+
+        Label:
+            size_hint:0.2,0.3
+            text:'<<< timer >>>'
+
+    AnchorLayout:
+        anchor_x:"right"
+        anchor_y:'center'
+
+        VideoPlayer:
+            size_hint:0.3,0.4
+
+            source:'120.mp4'
+
+
+
+    AnchorLayout:
+        anchor_x:'right'
+        anchor_y:'bottom'
+
+        BoxLayout:
+            orientation:'vertical'
+            size_hint:0.5,0.3
+            padding:3
+            spading:2
+
+            Image:
+                source:'az.png'
+
+            BoxLayout:
+
+                AnchorLayout:
+                    anchor_x:'center'
+                    anchor_y:'center'
+
+                    BoxLayout:
+                        size_hint:0.4,0.3
+
+                        Button:
+                            text:'stop'
+                            on_press:root.stopp()
+                        Button:
+                            text:'play'
+                            on_press:root.play()
+
+
+
